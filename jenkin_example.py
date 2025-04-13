@@ -1,25 +1,13 @@
-
-import time
-
-def factorial(n):
-    if n < 0:
-        return "Undefined for negative numbers"
-    elif n == 0 or n == 1:
-        return 1
-    else:
-        result = 1
-        for i in range(2, n + 1):
-            result *= i
-        return result
+import sys
+import io
 
 def main():
-    print("🔧 Jenkins CI/CD Demo Running...")
-    time.sleep(1)
-    num = 5
-    print(f"📦 Calculating factorial of {num}")
-    result = factorial(num)
-    print(f"✅ Factorial of {num} is {result}")
-    print("🎉 Job completed successfully!")
+    # Configure stdout to handle UTF-8 encoding
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+    
+    print("\U0001f527 Jenkins CI/CD Demo Running...")
+    print("This is a simple Jenkins pipeline demo!")
+    print("All systems go!")
 
 if __name__ == "__main__":
     main()
